@@ -1,11 +1,12 @@
 ---
-
+const pageTitle = "Home Page";
 ---
 <a href="/">Home</a>
 <a href="/about/">About</a>
   <a href="/blog/">Blog</a>
 <html lang="en">
 	<head>
+		<title>{pageTitle}</title>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
@@ -13,7 +14,7 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Stephanie's Astro site</h1>
+		<h1>{pageTitle}</h1>
 
 	</body>
 </html>
