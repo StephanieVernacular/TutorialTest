@@ -1,0 +1,77 @@
+---
+
+---
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+</style>
+
+
+
+
+
+<moduleeditor>
+    <div class="footer">
+
+       
+
+        <p>
+            TECHNICAL MODULE
+    <select id = "select1" onchange="test(this)">
+      <option>...</option>
+      <option>HIGH POWER OPTICS / ADAPTIVE MICROGLASS LENSING</option>
+      <option>PENETRATIVE CHEMICAL AND ETH-RAY IMAGING</option>
+    </select> <br>
+    EDITORIAL MANIFOLD
+    <select id = "select2" onchange="test(this)">
+      <option>...</option>
+      <option>ENCYCLOPAEDIC</option>
+      <option>PROSAIC</option>
+    </select> <br>
+    MOOD MATRIX
+    <select id = "select3" onchange="test(this)">
+      <option>...</option>
+      <option>PASSIVE PESSIMIST PROTOCOL</option>
+      <option>RATIONALIST REALIST REGIME</option>
+      <option>HOPEFUL HUMANIST HASHING-FUNCTION</option>
+    </select>
+    <span id = "finalResult"></span>
+
+</p>
+
+
+</div>
+
+<script>
+
+
+
+  var s1 = document.getElementById("select1").value;
+  var s2 = document.getElementById("select2").value;
+  var s3 = document.getElementById("select3").value;
+  //debug
+  console.log(s1 + ", " + s2 + ", " + s3);
+  //check to make sure every value is set
+  if(s1 != "..." && s2 != "..." && s3 != "..."){
+
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+

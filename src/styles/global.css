@@ -32,7 +32,9 @@ background-color:rgb(240, 240, 240)
 
 }
 
-
+p {
+background-color:rgb(240, 240, 240)
+}
 
 
 /* nav styles */
@@ -121,6 +123,33 @@ transition: 0.6s
   animation: 
     b .7s infinite steps(1),   
     t calc(var(--n)*.045s) steps(var(--n)) forwards;
+}
+@keyframes t{
+  from {background-size:0 200%}
+}
+@keyframes b{
+  50% {background-position:0 -100%,0 0}
+}
+
+
+
+
+
+
+.typesmall {
+  font-family: monospace;
+  font-weight: 500;
+  color:#0000;
+  background:
+    linear-gradient(-90deg,#000000 5px,#0000 0) 10px 0,
+    linear-gradient(#000000 0 0) 0 0;
+  background-size:calc(var(--n)*1ch) 200%;
+  -webkit-background-clip:padding-box,text;
+  background-clip:padding-box,text;
+  background-repeat:no-repeat;
+  animation: 
+    b .5s infinite steps(1),   
+    t calc(var(--n)*.028s) steps(var(--n)) forwards;
 }
 @keyframes t{
   from {background-size:0 200%}

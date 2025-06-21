@@ -1,12 +1,30 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/Blogpost.astro';
-const allPosts = Object.values(import.meta.glob('../pages/posts/*.md', { eager: true }));
-const pageTitle = "My Astro Learning Blog"
+
+// Load all post components with metadata from frontmatter
+const allPostImports = import.meta.glob('../pages/posts/*.astro', { eager: true });
+
+const allPosts = Object.entries(allPostImports).map(([path, mod]) => {
+  const url = path
+    .replace('../pages', '')
+    .replace('.astro', '')
+    .replace('/index', '/'); // optional: normalize index routes
+
+  return {
+    url,
+    title: mod.frontmatter?.title || 'Untitled',
+  };
+});
+
+const pageTitle = "Transmissions_Manifest";
 ---
+
 <BaseLayout pageTitle={pageTitle}>
-  <p>This is where I will post about my journey learning Astro.</p>
+  <p>Access All Narrative Data Streams:</p>
   <ul>
-    {allPosts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+    {allPosts.map(post => (
+     <BlogPost url={post.url} title={post.title} />
+    ))}
   </ul>
 </BaseLayout>
