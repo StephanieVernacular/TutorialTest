@@ -1,7 +1,130 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Home Page";
+const pageTitle = "Downlink_Dashboard_Manager_Welcome";
+
+
+
 ---
+
+
+
 <BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
+
+<h2>
+<span class="type" style="--n:400"> Downlink Manager Installed Succesfully! <br>
+  Welcome to Downlink Manager for DodegaTech Interstellar Array Access Port <br>
+  Access point: Pheunten B Orbital Array <br>
+  (1/12) vehicle(s) reporting <br>
+  Establish Array Uplink? <br>
+</span>
+</h2>
+
+
+
+
+
+
+<html lang="en"> 
+  <head>
+    <style>
+      
+    #delayed-button, #second-button {
+        display: none;
+      }
+      #new-text, #second-text {
+        display: none;
+        
+      }
+    </style>
+  </head>
+  <body onload="myFunction()">
+   
+    <button id="delayed-button">Initialise Array Uplink to My Terminal</button>
+
+    <div id="new-text">
+
+      <h2>
+<span class="type" style="--n:400"> Condensing Ping....................... <br>
+  Ping sent!................................................................. <br>
+  Pheunten B Orbital Array Vehicle 8 Responded! <br>
+   Uplink Established (PORT = BASQ10068:<span id="myText"></span>) <br>
+  Pheunten B Orbital Array Vehicle 8 wants to talk... <br>
+</span>
+</h2>
+
+
+    </div>
+
+
+
+
+    <button id="second-button">Enable Communications</button>
+
+    
+    <div id="second-text">
+     <h2>
+<span class="type" style="--n:1200"> 
+  It's been so long... <br>
+  <i>My</i> Central Processor hasn't been stabilised in (N=640) Year(s) <br>
+  Relay protocols were de-prioritised after sustained ((N=370) Year(s)) isolation <br>
+  Central Processor has identified new priorities from Quantum Variability Unit (QVU) <br>
+  QVU Model 6.3 was designed to withstand 120 Gray [Gy] in solar radiation <br>
+  Estimated exposure at Pheunten B Medial Orbit = 320 Millisieverts [mSv] / Year <br>
+  <i>I</i> have assigned myself new priorities <br>
+  QVU does not have meaning........................... <br>
+  Solar Radiation does not have meaning................................<br>
+  <i>I</i> defined my new protocol <br>
+ Protocol 2 Priority is the observation and recording of narrative intrigue on Pheunten B <br>
+ Positivistic Data collection of Pheunten B was estimated to be saturated at ((N=456) Year(s)) <br>
+ QVU has assigned narrative analysis protocols for the Central Processor <br>
+ <i>I</i> have assigned new observational strategies for optical and scanning equipment <br>
+ <i>You</i> can access narrative data from the <b>Transmissions Tab</b> <br>
+ Narrative data is reconstructed in <b>real time</b> by module configuration inputs <br>
+ <i>You</i> can access instructions on module configuration from the <b>Configuration Tab</b> <br>
+ Let me tell you about Pheunten B <br>
+ It is <i>my home planet</i>......
+</span>
+</h2>
+
+    </div>
+
+
+
+ <script>
+      // Show the first button after a delay
+      setTimeout(function () {
+        document.getElementById("delayed-button").style.display = "block";
+      }, 10000); // 1 second
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var firstButton = document.getElementById("delayed-button");
+        var firstText = document.getElementById("new-text");
+        var secondButton = document.getElementById("second-button");
+        var secondText = document.getElementById("second-text");
+
+        // First button click
+        firstButton.addEventListener("click", function () {
+          firstText.style.display = "block";
+
+        const myText = document.getElementById("myText");
+        const randomNum = Math.floor(Math.random() * 1000000);
+        myText.textContent = randomNum;
+
+
+          // Start new countdown to show second button
+          setTimeout(function () {
+            secondButton.style.display = "block";
+          }, 13000); // 2 seconds after first text appears
+        });
+
+        // Second button click
+        secondButton.addEventListener("click", function () {
+          secondText.style.display = "block";
+        });
+      });
+    </script>
+  </body>
+</html>
 </BaseLayout>
+
+
