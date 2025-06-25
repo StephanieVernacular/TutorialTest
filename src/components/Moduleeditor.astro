@@ -1,5 +1,5 @@
 ---
-
+var {modconfiguration = 0} = Astro.props
 ---
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,53 +16,80 @@
 
 
 
-
-<moduleeditor>
-    <div class="footer">
-
-       
-
-        <p>
-            TECHNICAL MODULE
-    <select id = "select1" onchange="test(this)">
+<div class="footer">
+  <h2>
+    TECHNICAL MODULE
+    <select id="select1">
       <option>...</option>
       <option>HIGH POWER OPTICS / ADAPTIVE MICROGLASS LENSING</option>
       <option>PENETRATIVE CHEMICAL AND ETH-RAY IMAGING</option>
     </select> <br>
+
     EDITORIAL MANIFOLD
-    <select id = "select2" onchange="test(this)">
+    <select id="select2">
       <option>...</option>
       <option>ENCYCLOPAEDIC</option>
       <option>PROSAIC</option>
     </select> <br>
+
     MOOD MATRIX
-    <select id = "select3" onchange="test(this)">
+    <select id="select3">
       <option>...</option>
       <option>PASSIVE PESSIMIST PROTOCOL</option>
       <option>RATIONALIST REALIST REGIME</option>
       <option>HOPEFUL HUMANIST HASHING-FUNCTION</option>
     </select>
-    <span id = "finalResult"></span>
 
-</p>
-
-
+    <br><br>
+    <strong id="finalResult">modconfiguration: 0</strong>
+  </h2>
 </div>
 
-<script>
+<script type="module">
+  const select1 = document.getElementById("select1");
+  const select2 = document.getElementById("select2");
+  const select3 = document.getElementById("select3");
+  const result = document.getElementById("finalResult");
 
+  const opts = {
+    select1: [
+      "HIGH POWER OPTICS / ADAPTIVE MICROGLASS LENSING",
+      "PENETRATIVE CHEMICAL AND ETH-RAY IMAGING"
+    ],
+    select2: ["ENCYCLOPAEDIC", "PROSAIC"],
+    select3: [
+      "PASSIVE PESSIMIST PROTOCOL",
+      "RATIONALIST REALIST REGIME",
+      "HOPEFUL HUMANIST HASHING-FUNCTION"
+    ]
+  };
 
-
-  var s1 = document.getElementById("select1").value;
-  var s2 = document.getElementById("select2").value;
-  var s3 = document.getElementById("select3").value;
-  //debug
-  console.log(s1 + ", " + s2 + ", " + s3);
-  //check to make sure every value is set
-  if(s1 != "..." && s2 != "..." && s3 != "..."){
-
+  function getModConfig(s1, s2, s3) {
+    const index1 = opts.select1.indexOf(s1);
+    const index2 = opts.select2.indexOf(s2);
+    const index3 = opts.select3.indexOf(s3);
+    if (index1 === -1 || index2 === -1 || index3 === -1) return 0;
+    return index1 * 6 + index2 * 3 + index3 + 1; // Gives you 1–12
   }
+
+  function update() {
+    const val1 = select1.value;
+    const val2 = select2.value;
+    const val3 = select3.value;
+    const config = getModConfig(val1, val2, val3);
+    result.textContent = `modconfiguration: ${config}`;
+    localStorage.setItem("modconfiguration", config); // Optional: save for later
+  }
+
+  select1.addEventListener("change", update);
+  select2.addEventListener("change", update);
+  select3.addEventListener("change", update);
 </script>
+
+
+
+
+
 
 
 

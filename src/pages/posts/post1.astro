@@ -4,25 +4,72 @@ export const frontmatter = { title: "Test Post", date: "2025-06-21" };
 const pageTitle = "An Unknown Signal";
 ---
 
-<StoryLayout frontmatter={frontmatter} pageTitle={pageTitle}>
-<h2>
-Date: <br>
-Configure all three modules to begin narrative generation
-</h2>
+<StoryLayout frontmatter={frontmatter} pageTitle={pageTitle} />
+
+<main>
+  <h2>
+    Date: <br />
+    Configure all three modules to begin narrative transmissions
+  </h2>
+
+  <div id="story-output" style="margin-top: 2rem;"></div>
+
+  <button id="generate-button" style="margin-top: 1rem;">
+    REQUEST DATA CHUNK TRANSMISSION
+  </button>
+</main>
+
+
+<script type="module">
+  window.addEventListener('DOMContentLoaded', () => {
+    const modconfiguration = localStorage.getItem("modconfiguration");
+  
+    if (!modconfiguration || isNaN(modconfiguration)) {
+      alert("No valid modconfiguration found. Please go back and select your module settings.");
+      document.getElementById("generate-button").disabled = true;
+      return;
+    }
+
+    let currentChunkIndex = 1;
+    const totalChunks = 8;
+    const output = document.getElementById("story-output");
+    const button = document.getElementById("generate-button");
+
+button.addEventListener("click", async () => {
+  if (currentChunkIndex > totalChunks) {
+    output.innerHTML += "<p><em>STORY COMPLETE.</em></p>";
+    button.disabled = true;
+    return;
+  }
+
+  const modconfiguration = localStorage.getItem("modconfiguration");
+  if (!modconfiguration || isNaN(modconfiguration)) {
+    output.innerHTML += `<p style="color:red;">Invalid modconfiguration setting.</p>`;
+    button.disabled = true;
+    return;
+  }
+
+  const filePath = `/posts/post1chunks/post1chunk${currentChunkIndex}/vers${modconfiguration}.md`;
+  console.log("Fetching:", filePath);
+
+  try {
+    const response = await fetch(filePath);
+    if (!response.ok) throw new Error("File not found");
+
+    const text = await response.text();
+
+    const paragraph = document.createElement("p");
+    paragraph.textContent = text;
+    output.appendChild(paragraph);
+  } catch (error) {
+    output.innerHTML += `<p style="color:red;">Error loading chunk ${currentChunkIndex}.</p>`;
+  }
+
+  currentChunkIndex++;
+});
+  });
+</script>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-</StoryLayout>
