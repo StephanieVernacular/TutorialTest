@@ -26,7 +26,7 @@ const pageTitle = "An Unknown Signal";
   
     if (!modconfiguration || isNaN(modconfiguration)) {
       alert("No valid modconfiguration found. Please go back and select your module settings.");
-      document.getElementById("generate-button").disabled = true;
+      document.getElementById("generate-button").disabled = false;
       return;
     }
 
@@ -45,7 +45,7 @@ button.addEventListener("click", async () => {
   const modconfiguration = localStorage.getItem("modconfiguration");
   if (!modconfiguration || isNaN(modconfiguration)) {
     output.innerHTML += `<p style="color:red;">Invalid modconfiguration setting.</p>`;
-    button.disabled = true;
+    button.disabled = false;
     return;
   }
 
