@@ -3,13 +3,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/Blogpost.astro';
 
 // Load all post components with metadata from frontmatter
-const allPostImports = import.meta.glob('../pages/posts/*.astro', { eager: true });
+const allPostImports = import.meta.glob('../pages//blog/posts/*.astro', { eager: true });
+
+
 
 const allPosts = Object.entries(allPostImports).map(([path, mod]) => {
   const url = path
     .replace('../pages', '')
     .replace('.astro', '')
-    .replace('/index', '/'); // optional: normalize index routes
+    .replace('/index', '/'); 
 
   return {
     url,
