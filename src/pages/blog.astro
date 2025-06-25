@@ -8,11 +8,10 @@ const allPostImports = import.meta.glob('../pages/blog/posts/*.astro', { eager: 
 
 
 const allPosts = Object.entries(allPostImports).map(([path, mod]) => {
-  const url = path
-    .replace('../pages', '')
-    .replace('.astro', '')
-    .replace('/index', '/'); 
-
+const url = '/' + path
+  .replace('../pages', '')
+  .replace('.astro', '')
+  .replace('/index', '/');
   return {
     url,
     title: mod.frontmatter?.title || 'Untitled',
