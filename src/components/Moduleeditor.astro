@@ -13,36 +13,38 @@ var {modconfiguration = 0} = Astro.props
 }
 </style>
 
+<button id="toggle-footer" style="position: fixed; bottom: 0.4rem; right: 1rem; z-index: 1000;">
+  HIDE MODULES
+</button>
 
 
-
-<div class="footer">
+<div class="footer" id="footer">
+  <div id="footer-content">
   <h2>
-    TECHNICAL MODULE
+    TECHNICAL MODULE <br>
     <select id="select1">
       <option>...</option>
       <option>HIGH POWER OPTICS / ADAPTIVE MICROGLASS LENSING</option>
       <option>PENETRATIVE CHEMICAL AND ETH-RAY IMAGING</option>
     </select> <br>
 
-    EDITORIAL MANIFOLD
+    EDITORIAL MANIFOLD<br>
     <select id="select2">
       <option>...</option>
       <option>ENCYCLOPAEDIC</option>
       <option>PROSAIC</option>
     </select> <br>
 
-    MOOD MATRIX
+    MOOD MATRIX<br>
     <select id="select3">
       <option>...</option>
       <option>PASSIVE PESSIMIST PROTOCOL</option>
       <option>RATIONALIST REALIST REGIME</option>
       <option>HOPEFUL HUMANIST HASHING-FUNCTION</option>
     </select>
-
-    <br><br>
-    <strong id="finalResult">modconfiguration: 0</strong>
   </h2>
+  <br>
+  </div>
 </div>
 
 <script type="module">
@@ -84,6 +86,21 @@ var {modconfiguration = 0} = Astro.props
   select1.addEventListener("change", update);
   select2.addEventListener("change", update);
   select3.addEventListener("change", update);
+
+
+
+const toggleBtn = document.getElementById("toggle-footer");
+const footer = document.getElementById("footer");
+
+toggleBtn.addEventListener("click", () => {
+  footer.classList.toggle("collapsed");
+
+  const isCollapsed = footer.classList.contains("collapsed");
+  toggleBtn.textContent = isCollapsed ? "ACCESS MODULES" : "HIDE MODULES";
+});
+
+
+
 </script>
 
 

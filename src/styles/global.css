@@ -37,6 +37,15 @@ p {
 background-color:rgb(240, 240, 240)
 }
 
+.inputbutton{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+
+
+
 
 /* nav styles */
 
@@ -72,10 +81,10 @@ background-color:rgb(240, 240, 240)
 
 /* WIDESCREEN*/
 @media screen and (min-width: 636px) {
-.nav-links a {
+  .nav-links a {
   display: inline-block;
-  padding: 15px 20px;
-}
+  padding: 15px 20px; 
+  }
 
   .headerimage {
     width: 70px;
@@ -85,17 +94,26 @@ background-color:rgb(240, 240, 240)
     display: inline;
   }
 
-h2 {
+  h2 {
 
-font-size: 1.5em;
+  font-size: 1.5em;
 
-}
+  }
 
-h1 {
+  h1 {
 
-font-size: 2em;
+  font-size: 2em;
 
-}
+  }
+
+  .inputbutton{
+  display:flex;
+  justify-content:left;
+  align-items:left;
+  }
+
+
+
 
 
 }
@@ -124,7 +142,16 @@ font-size: 2em;
 
 
 
+#footer-content {
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
 
+.footer.collapsed #footer-content {
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+}
 
 
 
