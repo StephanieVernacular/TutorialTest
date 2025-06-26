@@ -1,18 +1,14 @@
 ---
-
-import Header from '../components/Header.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
 
 const pageTitle = "CONFIGURATION";
 
-
-
-
 ---
+<BaseLayout pageTitle={pageTitle}>
 <html lang="en">
 
-<Header />
-    <h1>{pageTitle}</h1>
+
     <h2>This page is under construction :0</h2>
 
     <p>Do some testing for me: go to the Transmissions tab and open the test, configure the three drop-downs at the bottom and start generating chunks. You can change the configuration of drop downs between chunks too!</p>
@@ -25,3 +21,4 @@ const pageTitle = "CONFIGURATION";
 
 
 </html>
+</BaseLayout>
