@@ -13,37 +13,36 @@ const pageTitle = "An Unknown Signal";
   </h2>
 
   <div id="story-output" style="margin-top: 2rem;"></div>
-    <div class="inputbutton">
+
   <button id="generate-button" style="margin-top: 1rem;">
     REQUEST DATA CHUNK TRANSMISSION
   </button>
-  </div>
-    <br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br>
 </main>
 
 
 <script type="module">
   window.addEventListener('DOMContentLoaded', () => {
-    const modconfiguration = localStorage.getItem("modconfiguration");
-  
 
 
-    let currentChunkIndex = 1;
-    const totalChunks = 8;
-    const output = document.getElementById("story-output");
-    const button = document.getElementById("generate-button");
+
+const output = document.getElementById("story-output");
+const button = document.getElementById("generate-button");
+
+let currentChunkIndex = 1;
+const totalChunks = 8;
 
 button.addEventListener("click", async () => {
-  if (currentChunkIndex > totalChunks) {
-    output.innerHTML += "<p><em>STORY COMPLETE.</em></p>";
-    button.disabled = true;
-    return;
+  const modconfiguration = Number(localStorage.getItem("modconfiguration"));
+
+  if (!modconfiguration || isNaN(modconfiguration) || modconfiguration <= 0) {
+    output.innerHTML += `<p style="color:red;">Please configure all modules before requesting</p>`;
+    return; 
   }
 
-  const modconfiguration = localStorage.getItem("modconfiguration");
-  if (!modconfiguration || isNaN(modconfiguration)) {
-    output.innerHTML += `<p style="color:red;">Invalid modconfiguration setting.</p>`;
-    button.disabled = false;
+  if (currentChunkIndex > totalChunks) {
+    output.innerHTML += `<p><em>STORY COMPLETE.</em></p>`;
+    button.disabled = true;
     return;
   }
 
@@ -55,7 +54,6 @@ button.addEventListener("click", async () => {
     if (!response.ok) throw new Error("File not found");
 
     const text = await response.text();
-
     const paragraph = document.createElement("p");
     paragraph.textContent = text;
     output.appendChild(paragraph);

@@ -42,6 +42,7 @@ var {modconfiguration = 0} = Astro.props
       <option>RATIONALIST REALIST REGIME</option>
       <option>HOPEFUL HUMANIST HASHING-FUNCTION</option>
     </select>
+    <span id="finalResult" style="display:block; margin-top: 0.5rem; font-weight: bold;"></span>
   </h2>
   <br>
   </div>
@@ -52,6 +53,10 @@ var {modconfiguration = 0} = Astro.props
   const select2 = document.getElementById("select2");
   const select3 = document.getElementById("select3");
   const result = document.getElementById("finalResult");
+
+  
+localStorage.setItem("modconfiguration", 0); // reset to 0 on page load
+
 
   const opts = {
     select1: [
@@ -74,14 +79,22 @@ var {modconfiguration = 0} = Astro.props
     return index1 * 6 + index2 * 3 + index3 + 1; // Gives you 1–12
   }
 
-  function update() {
-    const val1 = select1.value;
-    const val2 = select2.value;
-    const val3 = select3.value;
+function update() {
+  const val1 = select1.value;
+  const val2 = select2.value;
+  const val3 = select3.value;
+  const config = getModConfig(val1, val2, val3);
+
+  if (val1 !== "..." && val2 !== "..." && val3 !== "...") {
     const config = getModConfig(val1, val2, val3);
+    localStorage.setItem("modconfiguration", config);
     result.textContent = `modconfiguration: ${config}`;
-    localStorage.setItem("modconfiguration", config); // Optional: save for later
+    console.log("Updated modconfiguration:", config);
+  } else {
+    localStorage.setItem("modconfiguration", 0);
+    result.textContent = "Please select all modules.";
   }
+}
 
   select1.addEventListener("change", update);
   select2.addEventListener("change", update);
