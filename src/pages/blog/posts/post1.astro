@@ -14,12 +14,15 @@ const pageTitle = "An Unknown Signal";
 
   <div id="story-output" style="margin-top: 2rem;"></div>
 <div class="inputbutton">
-  <button id="generate-button" style="margin-top: 1rem;">
+  <button id="generate-button" style="margin-top: 1rem; margin: auto;">
     REQUEST DATA CHUNK TRANSMISSION
   </button>
   </div>
   <br><br><br><br><br><br><br><br><br><br><br><br>
 </main>
+
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 
 <script type="module">
@@ -55,9 +58,9 @@ button.addEventListener("click", async () => {
     if (!response.ok) throw new Error("File not found");
 
     const text = await response.text();
-    const paragraph = document.createElement("p");
-    paragraph.textContent = text;
-    output.appendChild(paragraph);
+    const article = document.createElement("article");
+    article.innerHTML = marked.parse(text);
+    output.appendChild(article);
   } catch (error) {
     output.innerHTML += `<p style="color:red;">Error loading chunk ${currentChunkIndex}.</p>`;
   }

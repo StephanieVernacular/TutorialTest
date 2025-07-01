@@ -3,6 +3,7 @@ html {
   font-family: monospace;
 }
 
+
 body {
   margin: 12px;
   max-width: 360ch;
@@ -10,7 +11,7 @@ body {
   box-sizing: border-box;
   line-height: 1.5;
   color:rgb(0, 0, 0);
-
+  text-align: center;
 }
 
 * {
@@ -22,19 +23,23 @@ h1 {
 
 font-size: 1.5em;
 background-color:rgb(240, 240, 240);
-margin: 0.6rem;
+margin: auto;
+margin-bottom: 2rem;
+margin-top: 2rem;
 text-align: center;
 max-width: 53ch;
 }
 
 h2 {
 font-size: 1em;
-background-color:rgb(240, 240, 240)
-
+background-color:rgb(240, 240, 240);
+text-align: centre;
+margin: auto;
 }
 
 p {
-background-color:rgb(240, 240, 240)
+background-color:rgb(240, 240, 240);
+
 }
 
 .inputbutton{
@@ -43,6 +48,50 @@ background-color:rgb(240, 240, 240)
   align-items:center;
 }
 
+
+
+
+article h1, article h2, article p, article blockquote {
+  margin-bottom: 0.2rem;
+  margin-top: 0rem;
+  line-height: 1.5;
+  background-color:rgb(240, 240, 240);
+  max-width: 100ch;
+  padding: 0.2rem;
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-family: "verdana", sans-serif;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article p {
+font-size: 0.7em;
+}
+
+article blockquote {
+  font-size: 0.95em;
+  max-width: 70ch;
+}
+
+
+
+
+
+
+
+
+h3 {
+font-size: 1.4em;
+background-color:rgb(240, 240, 240);
+text-align: left;
+margin: auto;
+max-width: 80ch;
+padding: 1rem;
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
 
 
 
@@ -90,6 +139,36 @@ background-color:rgb(240, 240, 240)
 
 /* WIDESCREEN*/
 @media screen and (min-width: 636px) {
+
+article h1, article h2, article p, article blockquote {
+  margin-bottom: 0.2rem;
+  margin-top: 0rem;
+  line-height: 1.5;
+  background-color:rgb(240, 240, 240);
+  max-width: 100ch;
+  padding: 0.2rem;
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-family: "verdana", sans-serif;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article p {
+font-size: 1em;
+}
+
+article blockquote {
+  font-size: 0.95em;
+  max-width: 70ch;
+}
+
+
+
+
+
+
   .nav-links a {
   display: inline-block;
   padding: 15px 20px; 
@@ -110,7 +189,7 @@ background-color:rgb(240, 240, 240)
   }
 
   h1 {
-
+  text-align: center;
   font-size: 2em;
 
   }
@@ -170,11 +249,9 @@ background-color:rgb(240, 240, 240)
 
 
 
-
-
-
-
 .type {
+  text-align: left;
+  max-width: 40ch;
   font-family: monospace;
   font-weight: 500;
   color:#0000;
@@ -187,7 +264,7 @@ background-color:rgb(240, 240, 240)
   background-repeat:no-repeat;
   animation: 
     b .7s infinite steps(1),   
-    t calc(var(--n)*.045s) steps(var(--n)) forwards;
+    t calc(var(--n)*.055s) steps(var(--n)) forwards;
 }
 @keyframes t{
   from {background-size:0 200%}
@@ -197,29 +274,4 @@ background-color:rgb(240, 240, 240)
 }
 
 
-
-
-
-
-.typesmall {
-  font-family: monospace;
-  font-weight: 500;
-  color:#0000;
-  background:
-    linear-gradient(-90deg,#000000 5px,#0000 0) 10px 0,
-    linear-gradient(#000000 0 0) 0 0;
-  background-size:calc(var(--n)*1ch) 200%;
-  -webkit-background-clip:padding-box,text;
-  background-clip:padding-box,text;
-  background-repeat:no-repeat;
-  animation: 
-    b .5s infinite steps(1),   
-    t calc(var(--n)*.028s) steps(var(--n)) forwards;
-}
-@keyframes t{
-  from {background-size:0 200%}
-}
-@keyframes b{
-  50% {background-position:0 -100%,0 0}
-}
 
