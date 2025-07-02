@@ -5,13 +5,14 @@ opposite him counted out shiny grey packages and placed them in a small
 pile. The edges of each packet were crimped shut with the surface
 tightly bonded by a vacuum-seal to its grainy contents.
 
-"I picked up that board from a homesteader down Tecker-May valley^1^
-way. It was from one of his agro-drones that got caught in a storm. Too
-much shit to carry but I knew that main board would turn over well. Been
-tinkering it every night as we made our way overland here, cleaning up
-some of the connections. Replaced the memory stick too."
+“I picked up that board from a homesteader down Tecker-May
+valley<sup>1</sup> way. It was from one of his agro-drones that got
+caught in a storm. Too much shit to carry but I knew that main board
+would turn over well. Been tinkering it every night as we made our way
+overland here, cleaning up some of the connections. Replaced the memory
+stick too.”
 
-Ben's eyes and hands wandered freely as he spoke, his body not nervous
+Ben’s eyes and hands wandered freely as he spoke, his body not nervous
 but ever-restless.
 
 The man across the bench had ceased his package-counting and was
@@ -23,34 +24,35 @@ the retouched connections had a bronze colour to their soldered
 connections. It was evident that Ben the wanderer had employed a home
 recipe alloy in his repairs. The seller supposed it was likely an excess
 of brass, which would offer admirable corrosion resistance for
-agricultural machinery working in adverse conditions^2^.
+agricultural machinery working in adverse conditions<sup>2</sup>.
 
-"Yeah I saw a storm heading down that way. Did this Tecker-May
-farmer-jay have a name or was he another stranger?"
+“Yeah I saw a storm heading down that way. Did this Tecker-May
+farmer-jay have a name or was he another stranger?”
 
-He met Ben's eyes as he said the word 'stranger'.
+He met Ben’s eyes as he said the word ‘stranger’.
 
-"Nah nah well, I think he was legit but he just didn't talk much. Do you
-get, y'know ***replacement*** problems around here much?"
+“Nah nah well, I think he was legit but he just didn’t talk much. Do you
+get, y’know ***replacement*** problems around here much?”
 
-"Further south mostly. I'm just glad someone is getting something out of
+“Further south mostly. I’m just glad someone is getting something out of
 that dirt considering how much topsoil we donate down-river every wet
-season. Further north over the range there's another town well away from
-any ***replacers***. Name of Kart-Peilt^3^. If you're going that way."
+season. Further north over the range there’s another town well away from
+any ***replacers***. Name of Kart-Peilt<sup>3</sup>. If you’re going
+that way.”
 
-"We're headed west. Schlepping up that big hill to check out the
-installation there with the big aerial. What's the go with that
-anyways?"
+“We’re headed west. Schlepping up that big hill to check out the
+installation there with the big aerial. What’s the go with that
+anyways?”
 
 The man twisted a knob on the black device and all the LEDs shone green.
 He gave a small weak smile and put the tool down.
 
-"We had a good man in there years back. He caught terrible dysentery
+“We had a good man in there years back. He caught terrible dysentery
 though and we were between doctors and medical supplies. He passed in
 his sleep. Town was smaller then. Lights came back on about 6 months
 ago. Some man in a big black jacket stands outside sometimes, mostly at
 night. We keep an eye on it with our optics but not a soul in town is
-gutsy enough to check it out. Just a bad vibe feeling man."
+gutsy enough to check it out. Just a bad vibe feeling man.”
 
 The **huge black aerial antenna** was the visually defining feature of
 the local region. With most of the valley mountains distant and low, the
@@ -59,20 +61,20 @@ through the gaps in the tree canopy in the forested parts of the
 north-south path. It could be presumed that most residents would see it
 and the little building upon which it stood, every day.
 
-"Could be good electronics in there. Might turn well aye?"
+“Could be good electronics in there. Might turn well aye?”
 
-"Not if you come back here it won't. I can't spare you any more of these
-protein rations, I have a kid back in my camp and we don't trade in
-currencies here. As for my fellow noble townsfolk they're still uh,
+“Not if you come back here it won’t. I can’t spare you any more of these
+protein rations, I have a kid back in my camp and we don’t trade in
+currencies here. As for my fellow noble townsfolk they’re still uh,
 tripping over the roots of the tech-tree. They trade in sheep and dirty
-jokes. Not much else."
+jokes. Not much else.”
 
 Ben began placing the grey packages in a large hiking pack, feeling the
 weight of each one as he went.
 
-"Know any good dirty sheep jokes^4^?" he cracked a wide grin.
+“Know any good dirty sheep jokes<sup>4</sup>?” he cracked a wide grin.
 
-"None you haven't heard before **stranger**."
+“None you haven’t heard before **stranger**.”
 
 >*1 Tecker-May Valley: A small mostly forested valley in the southern
 half of the Great Quakpos Formal mountain ranges. Settlement estimate
@@ -84,7 +86,7 @@ technology incentivizes the use of durable reusable machinery maintained
 with recycled parts.*
 
 >*3 Kart-Peilt: Settlement estimate 0.15, replacement incidence
-indeterminate. *
+indeterminate.*
 
 >*4 Jokes of a sexual nature regarding the pastoral families Bovidae and
 Camelidae*
