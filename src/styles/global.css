@@ -4,6 +4,43 @@ html {
 }
 
 
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;  
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.blog-card {
+
+  background: #fff;
+  border: 1px solid #ccc;
+  max-width: 50ch;
+  padding: 1rem;
+  transition: transform 0.2s ease;
+  margin-bottom: 0.2rem;  
+
+}
+
+.blog-card:hover {
+  transform: scale(1.08);
+}
+
+.blog-card h3 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+.blog-card a {
+  text-decoration: none;
+}
+
+
+
 body {
   margin: 12px;
   max-width: 360ch;
@@ -72,7 +109,7 @@ font-size: 0.7em;
 
 article blockquote {
   font-size: 0.95em;
-  max-width: 70ch;
+  max-width: 32ch;
 }
 
 
@@ -92,6 +129,17 @@ padding: 1rem;
 margin-top: 1rem;
 margin-bottom: 1rem;
 }
+
+
+.howtoimage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  width: 500px;
+  height: 560px;
+}
+
 
 
 
@@ -137,8 +185,26 @@ margin-bottom: 1rem;
 }
 
 
+
+
+
+
 /* WIDESCREEN*/
 @media screen and (min-width: 636px) {
+
+
+
+.blog-card {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+  width: 100%;      
+  max-width: 100%;
+}
+
+
+
 
 article h1, article h2, article p, article blockquote {
   margin-bottom: 0.2rem;
@@ -163,6 +229,7 @@ article blockquote {
   font-size: 0.95em;
   max-width: 70ch;
 }
+
 
 
 
@@ -250,6 +317,7 @@ article blockquote {
 
 
 .type {
+  
   text-align: left;
   max-width: 40ch;
   font-family: monospace;
@@ -274,4 +342,27 @@ article blockquote {
 }
 
 
+.typeloading {
+ text-align: left;
+  max-width: 40ch;
+  font-family: monospace;
+  font-weight: 500;
+  color:#0000;
+  background:
+    linear-gradient(-90deg,#000000 5px,#0000 0) 10px 0,
+    linear-gradient(#000000 0 0) 0 0;
+  background-size:calc(var(--n)*1ch) 200%;
+  -webkit-background-clip:padding-box,text;
+  background-clip:padding-box,text;
+  background-repeat:no-repeat;
+  animation: 
+    b .7s infinite steps(1),   
+    t calc(var(--n)*.15s) steps(var(--n)) forwards;
+}
+@keyframes t{
+  from {background-size:0 200%}
+}
+@keyframes b{
+  50% {background-position:0 -100%,0 0}
+}
 

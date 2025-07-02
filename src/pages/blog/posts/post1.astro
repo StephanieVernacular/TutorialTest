@@ -1,7 +1,8 @@
 ---
 import StoryLayout from '../../../layouts/StoryLayout.astro';
-export const frontmatter = { title: "Test Post", date: "2025-06-21" };
-const pageTitle = "An Unknown Signal";
+export const frontmatter = { title: "Test Post", date: "2025-06-21", cycle: "Null", 
+abstract: "A Test Post of Dubious Stability" };
+const pageTitle = "Test Post";
 ---
 
 <StoryLayout frontmatter={frontmatter} pageTitle={pageTitle} />
@@ -9,7 +10,18 @@ const pageTitle = "An Unknown Signal";
 <main>
   <h2>
     Date: <br />
-    Configure all three modules to begin narrative transmissions
+    Configure all three modules to begin narrative transmissions <br>
+  Start from chunk:
+  <select id="selectchunk">
+  <option value="1" selected>1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  </select>
   </h2>
 
   <div id="story-output" style="margin-top: 2rem;"></div>
@@ -18,56 +30,105 @@ const pageTitle = "An Unknown Signal";
     REQUEST DATA CHUNK TRANSMISSION
   </button>
   </div>
-  <br><br><br><br><br><br><br><br><br><br><br><br>
+
 </main>
 
+<div id="loading-screen" style="padding: 1rem; display: none; text-align: center; margin-top: 2rem;">
+  <img src="/graphics/loading.gif" alt="Loading..." width="80" />
+  <br><br>
+  <div style="background-color:rgb(240, 240, 240);">
+  <span class="typeloading" style="--n:100">
+  Requesting Narrative Data ... ... ...
+  </span>
+  </div>
+</div>
 
+<div id="loading-screen-sun" style="padding: 1rem; display: none; text-align: center; margin-top: 2rem;">
+  <img src="/graphics/sunload.gif" alt="Loading..." width="80" />
+  <br><br>
+  <div style="background-color:rgb(240, 240, 240);">
+  <span class="typeloading" style="--n:100">
+  I don't have to feel lonely in orbit ... 
+  </span>
+  </div>
+</div>
+
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <script type="module" src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 
 <script type="module">
   window.addEventListener('DOMContentLoaded', () => {
 
-
-
 const output = document.getElementById("story-output");
 const button = document.getElementById("generate-button");
-
+const startSelect = document.getElementById("selectchunk");
 let currentChunkIndex = 1;
 const totalChunks = 8;
 
+  if (startSelect && !isNaN(Number(startSelect.value))) {
+    currentChunkIndex = Number(startSelect.value);
+  }
+
+  startSelect?.addEventListener("change", () => {
+    const value = Number(startSelect.value);
+    if (!isNaN(value) && value >= 1 && value <= totalChunks) {
+      currentChunkIndex = value;
+    }
+  });
+
+
 button.addEventListener("click", async () => {
   const modconfiguration = Number(localStorage.getItem("modconfiguration"));
-
+  const randomNumDev = Math.floor(Math.random() * 5000);
   if (!modconfiguration || isNaN(modconfiguration) || modconfiguration <= 0) {
     output.innerHTML += `<p style="color:red;">Please configure all modules before requesting</p>`;
     return; 
   }
 
   if (currentChunkIndex > totalChunks) {
-    output.innerHTML += `<p><em>STORY COMPLETE <br> THANK YOU FOR READING A STEPHANIE VERNACULAR STORY</em></p><img src="/graphics/TestWacom.png"class="authorimage">`;
+    output.innerHTML += `<p><em>STORY COMPLETE <br> THANK YOU FOR READING A STEPHANIE VERNACULAR STORY</em></p><img src="/graphics/TestWacom.png" class="authorimage"><br>`;
     button.disabled = true;
     return;
   }
 
   const filePath = `/posts/post1chunks/post1chunk${currentChunkIndex}/vers${modconfiguration}.md`;
   console.log("Fetching:", filePath);
+  const loadingsun = document.getElementById("loading-screen-sun");
+  const loading = document.getElementById("loading-screen");
+  if(randomNumDev<=4500){
+  loading.style.display = "block";
+  button.disabled = true;
+  }
+if(randomNumDev>4500){
+  loadingsun.style.display = "block";
+  button.disabled = true;
+}
 
   try {
     const response = await fetch(filePath);
     if (!response.ok) throw new Error("File not found");
-
     const text = await response.text();
-    const article = document.createElement("article");
-    article.innerHTML = marked.parse(text);
-    output.appendChild(article);
+
+    setTimeout(() => {
+      loading.style.display = "none"; // Hide loading
+      loadingsun.style.display = "none"; // Hide loading
+      button.disabled = false; // Re-enable button
+
+      const article = document.createElement("article");
+      article.innerHTML = marked.parse(text);
+      output.appendChild(article);
+
+      currentChunkIndex++;
+    }, 5500+randomNumDev); // Delay 
   } catch (error) {
+    loading.style.display = "none";
+    button.disabled = false;
     output.innerHTML += `<p style="color:red;">Error loading chunk ${currentChunkIndex}.</p>`;
   }
-
-  currentChunkIndex++;
 });
-  });
+}); 
 </script>
 
 

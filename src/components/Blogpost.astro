@@ -2,7 +2,15 @@
 export interface Props {
   url: string;
   title: string;
+  date: string;
+  cycle: string;
+  abstract: string;
 }
-const { url, title } = Astro.props;
+const { url, title, date, cycle, abstract } = Astro.props;
 ---
-<li><a href={url}>{title}</a></li>
+<div class="blog-card">
+  <h3><a href={url}>{title}</a></h3>
+  <p><strong>Cycle:</strong> {cycle}</p>
+  <p><strong>Date:</strong> {new Date(date).toLocaleDateString('en-AU', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+  <p><em>{abstract}</em></p>
+</div>

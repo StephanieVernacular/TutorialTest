@@ -15,6 +15,9 @@ const url = '/' + path
   return {
     url,
     title: mod.frontmatter?.title || 'Untitled',
+    date: mod.frontmatter?.date || 'Unknown Date',
+    cycle: mod.frontmatter?.cycle || 'Unknown Cycle',
+    abstract: mod.frontmatter?.abstract || 'Unknown Tale',
   };
 });
 
@@ -22,10 +25,16 @@ const pageTitle = "Transmissions_Manifest";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <p>Access All Narrative Data Streams:</p>
-  <ul>
+  <h2>Access All Narrative Data Streams:</h2>
+  <div class="post-grid">
     {allPosts.map(post => (
-     <BlogPost url={post.url} title={post.title} />
+      <BlogPost 
+        url={post.url} 
+        title={post.title} 
+        date={post.date} 
+        cycle={post.cycle} 
+        abstract={post.abstract} 
+      />
     ))}
-  </ul>
+  </div>
 </BaseLayout>
