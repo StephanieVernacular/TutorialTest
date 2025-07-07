@@ -1,1 +1,91 @@
-This is Version 4 of chunk 2
+**STAGGERED78918 - 4OPP**
+
+Raeisse Ul-Sinouester took a long drag from his vape pen. It would be
+only a few more smoke breaks before he would be completely out of the
+nicotinol-Super4 solution. In the past he had diluted his supply to
+stave off withdrawals, to keep himself presentable for long-haul stellar
+logistics gigs<sup>1</sup>. It wasn’t his priority now. He was a slave
+to his new obsession. With his mind hot and buzzing like an engine he
+would crack the mystery of this outpost and connect with someone who
+could bring him back to a civilized planet. Somewhere with glittering
+projections, microbial wines, central plumbing and commissionable female
+bodies. Putting away the vape, he watched a lone plume of smoke rising
+from the east. The nearest town, he presumed. He had relished spotting
+the sparkles of light reflecting off their binoculars from time to time
+during his stay. Obviously they wanted nothing to do with their new
+neighbour and the feeling was quite mutual. He stepped back inside his
+laboratory and brought the heavy steel door closed behind him. His lair
+was made from corrugated steel plates and I-Beam girders. The exterior
+walls were painted with a thick and gummy plastic coating, the colour of
+which was a noncommittal seafoam green. It was faded and cracking at
+some corners, and the overall look was not dissimilar to the pale green
+lichens growing on the southern facing wall.
+
+For the next few hours he tinkered at his computers. When Raeisse had
+first found the place he noticed that the previous occupant<sup>2</sup>
+had begun a crude communications project. The huge aerial was picking up
+on a mysterious signal that was defying nominal decoding. Limited by
+skills and imagination the initial setup was procedurally filtering and
+cross-comparing the signal to a basic set of transmission protocols:
+Television, Radio, Internet, Stellarcom, Pathing and Droid-pings.
+Recognising the futility of such an arrangement he had spent months
+reformatting and linking the building's existing server racks to perform
+a broader analysis. He was using an analytic-generative model to hone in
+on the data stream. Raeisse was a very smart man. The challenge
+represented a perfect opportunity to him. The most precious gems can
+spill forth from the toughest geode.
+
+There was a small window above a sink on the southern wall of the
+building. It was the only window on the ground floor. Someone was
+tapping at it. Raeisse’s heart jumped into his throat as he saw some
+great mannish shape darkening the warm sunset glow. The figure was
+tapping and gesticulating wildly, beckoning towards the door. Raeisse
+moved his small pistol to his right hand jacket pocket and slowly pulled
+aside the sliding door with his left.
+
+There were two figures waiting outside. 
+
+The man had brown skin, a bald dome and modest black facial hair,
+turning grey on his upper lip. He was dressed in a dark blue raincoat
+that appeared to have a number of small electronic parts embedded in it,
+connected by wires that dived in and out of the exterior material layer
+in splashes of crude hand-stitching. His boots, pants and pack were of a
+foreign make. The cut and leather of the boots was not recognisable and
+the pants and pack were of a thickly textured brown textile made with a
+coarse natural fibre. Tiny threads of yellow, red and orange were mixed
+into the weave<sup>3</sup>.
+
+The woman was taller than would be seen on any civilized world, and more
+stoutly built too. Her blonde hair was shaved close to her head. The
+graveness of these features contrasted mightily with her face, which was
+round in shape with large expressive eyes and mouth. She was expressing
+a flat frown at this time. The pattern of fading and wearing of her
+orange rubber jacket clearly revealed the outline of micro-light armour
+plates installed into the inner layers of the garment. Her boots and
+pants were of a more military grade, complementing the huge rifle
+loosely hanging from her shoulder. Looking closely the pants were of the
+same material as the mans but dyed black, and with thin white, green and
+blue threads.
+
+The bald man spoke.
+
+“Afternoon stranger, I’m Ben and this is my er, fellow traveller, Gonne.
+Hope we didn’t scare you y’know. We’ve just seen this place from the
+village down that way. To be honest we just wanted to know if we could
+check out this building you’ve stumped up in?”
+
+>*1 I have grown so tired of my stupid and slow colleagues. The junction
+engineer is the worst of them all. Five times now on this journey I have
+faked an issue report from the rear-most coupling. The round trip down
+and back up the train takes him 7 hours of walking. Clomping in his
+ridiculous boots. A good time for me to read.*
+
+>*2 Broken glass and blood all over the photograph of Therese. Grasping
+at the shards and clutching his side in another inhuman twisting of
+pain, fat wet tears smeared between the tiles and his cheek. Their new
+life had foundered on the rocks, in a million and one humiliating ways
+now.*
+
+>*3 “Fine Gonne, since you insist. We will only do him up something in
+the Sec-Manis fashion. You remember their fashion? Bog-linen with three
+thin coloured threads only.”*
