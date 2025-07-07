@@ -6,10 +6,14 @@ var {modconfiguration = 0} = Astro.props
 <style>
 .footer {
   position: fixed;
-  left: 0;
+  margin-left:auto;
+  margin-right: auto;
   bottom: 0;
   width: 100%;
   text-align: center;
+  max-width: 100ch;
+  left: 0;
+  right: 0;
 }
 </style>
 
@@ -20,7 +24,7 @@ var {modconfiguration = 0} = Astro.props
 
 <div class="footer" id="footer">
   <div id="footer-content">
-  <h2>
+  <h2 style="border-width:3px; border-style:solid; border-color:#FF0000;">
     TECHNICAL MODULE <br>
     <select id="select1">
       <option>...</option>
